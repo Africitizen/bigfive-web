@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name: 'Wrapper',
   props: {
     background: {
       type: String,
@@ -32,4 +33,4 @@ export default {
   border-top: 1px solid #eaeaea;
   border-bottom: 1px solid #eaeaea;
 }
-<style>
+</style>
