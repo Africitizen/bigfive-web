@@ -40,7 +40,7 @@ If you want to translate it directly on github instead, you can follow the descr
 If you want to translate the result text you need to follow the description
 [here](https://github.com/Alheimsins/b5-result-text#help-wanted).
 
-### I need help to setup bigfive-test.com on my own server
+### I need help to setup hypatie.africitizen.co on my own server
 
 Try to follow the installation instructions
 [here](https://github.com/rubynor/bigfive-web#installation).
@@ -50,7 +50,7 @@ thoroughly what you need help with, so we can give you a good price estimate.
 
 Our fee is $120/h.
 
-### I need help to rebrand bigfive-test.com
+### I need help to rebrand hypatie.africitizen.co
 
 If you need help to rebrand the website, contact us at bigfive-test@rubynor.com and describe
 thoroughly what you have in mind, so we can give you a good price estimate.

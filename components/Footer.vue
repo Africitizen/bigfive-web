@@ -8,15 +8,15 @@
       >
         <v-row class="footer-wrapper pl-0">
           <v-col class="footer-heading">
-            SAY<br>HALLO
+            Africitizen
           </v-col>
           <v-col
             cols="12"
             class="pt-0"
           >
             <a
-              href="https://www.facebook.com/rubynorno/"
-              aria-label="Gå til facebook"
+              href="https://www.facebook.com/africitizen"
+              aria-label="Africitizen"
             >
               <v-icon large>{{ mdiFacebook }}</v-icon>
             </a>
@@ -28,8 +28,8 @@
             />
 
             <a
-              href="https://github.com/rubynor"
-              aria-label="Gå til github"
+              href="https://github.com/Africitizen"
+              aria-label="Africitizen"
             >
               <v-icon large>{{ mdiGithub }}</v-icon>
             </a>
@@ -41,21 +41,8 @@
             />
 
             <a
-              href="https://twitter.com/rubynor"
-              aria-label="Gå til twitter"
-            >
-              <v-icon large>{{ mdiTwitter }}</v-icon>
-            </a>
-
-            <v-divider
-              inset
-              vertical
-              class="mx-1"
-            />
-
-            <a
-              href="https://no.linkedin.com/company/rubynor-as"
-              aria-label="Gå til linkedIn"
+              href="https://www.linkedin.com/company/africitizen"
+              aria-label="Africitizen"
             >
               <v-icon large>{{ mdiLinkedin }}</v-icon>
             </a>
@@ -64,16 +51,13 @@
             cols="12"
             class="footer-about"
           >
-            Rubynor<br>
-            Bedriftsveien 64<br>
-            3735 Skien, Norway<br><br>
-            bigfive-test@rubynor.com<br>
+            contact@africitizen.co<br>
           </v-col>
           <v-col
             class="footer-text"
             cols="12"
           >
-            © {{ new Date().getFullYear() }} — Rubynor - all rights reserved.
+            © 2023 - {{ new Date().getFullYear() }} Africitizen - all rights reserved.
           </v-col>
         </v-row>
       </v-col>

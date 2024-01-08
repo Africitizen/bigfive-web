@@ -18,10 +18,6 @@
             :class="{ 'responsive-text': $vuetify.breakpoint.smAndDown }"
             v-html="$t('frontpage.description.top')"
           />
-          <p
-            :class="{ 'responsive-text': $vuetify.breakpoint.smAndDown }"
-            v-html="$t('frontpage.description.info')"
-          />
 
           <v-btn
             x-large
@@ -52,6 +48,7 @@
         </v-col>
       </v-row>
     </Wrapper>
+
     <Wrapper background="#e4e4e4">
       <v-row
         cols="12"
@@ -71,6 +68,7 @@
         </v-col>
       </v-row>
     </Wrapper>
+
     <Wrapper background="white">
       <v-row
         cols="12"
@@ -97,33 +95,16 @@
           class="text-md-left text-center"
         >
           <h1 v-html="$t('frontpage.compare.title')" />
+
+          <strong style="color: rgba(0, 0, 0, 0.87);" v-html="$t('frontpage.compare.title1')"/>
           <p v-html="$t('frontpage.compare.text1')" />
-          <p class="black--link">
-            {{ $t('frontpage.compare.text2') }}
-            <nuxt-link :to="localePath('openness_to_experience')">
-              {{ $t('facets.openness_to_experience.title') }}
-            </nuxt-link>,
-            <nuxt-link :to="localePath('conscientiousness')">
-              {{ $t('facets.conscientiousness.title') }}
-            </nuxt-link>,
-            <nuxt-link :to="localePath('extraversion')">
-              {{ $t('facets.extraversion.title') }}
-            </nuxt-link>,
-            <nuxt-link :to="localePath('agreeableness')">
-              {{ $t('facets.agreeableness.title') }}
-            </nuxt-link> {{ $t('common.and') }}
-            <nuxt-link :to="localePath('neuroticism')">
-              {{ $t('facets.neuroticism.title') }}
-            </nuxt-link>
-          </p>
-          <p>
-            <v-btn
-              outlined
-              :to="localePath('/compare/W3sibmFtZSI6Ik1hcnZpbiIsImlkIjoiNThhNzA2MDZhODM1YzQwMGM4YjM4ZTg0In0seyJuYW1lIjoiQXJ0aHVyIERlbnQiLCJpZCI6IjVlNTZiYTdhYjA5NjEzMDAwN2Q1ZDZkOCJ9LHsibmFtZSI6IkZvcmQgUGVyZmVjdCIsImlkIjoiNWRlYTllODhlMTA4Y2IwMDYyMTgzYWYzIn0seyJuYW1lIjoiU2xhcnRpYmFydGZhc3QiLCJpZCI6IjVlNTZiNjUwYjA5NjEzMDAwN2Q1ZDZkMCJ9XQ%3D%3D')"
-            >
-              {{ $t('frontpage.compare.action') }}
-            </v-btn>
-          </p>
+
+          <strong style="color: rgba(0, 0, 0, 0.87);" v-html="$t('frontpage.compare.title2')"/>
+          <p v-html="$t('frontpage.compare.text2')" />
+
+          <strong style="color: rgba(0, 0, 0, 0.87);" v-html="$t('frontpage.compare.title3')"/>
+          <p v-html="$t('frontpage.compare.text3')" />
+
         </v-col>
       </v-row>
       <v-row>
@@ -135,10 +116,18 @@
             style="color: #797878"
             v-html="$t('frontpage.share')"
           />
-          <ShareLinks />
+          <p>
+            <v-btn
+              outlined
+              :to="localePath('/compare/W3sibmFtZSI6Ik1hcnZpbiIsImlkIjoiNThhNzA2MDZhODM1YzQwMGM4YjM4ZTg0In0seyJuYW1lIjoiQXJ0aHVyIERlbnQiLCJpZCI6IjVlNTZiYTdhYjA5NjEzMDAwN2Q1ZDZkOCJ9LHsibmFtZSI6IkZvcmQgUGVyZmVjdCIsImlkIjoiNWRlYTllODhlMTA4Y2IwMDYyMTgzYWYzIn0seyJuYW1lIjoiU2xhcnRpYmFydGZhc3QiLCJpZCI6IjVlNTZiNjUwYjA5NjEzMDAwN2Q1ZDZkMCJ9XQ%3D%3D')"
+            >
+              {{ $t('frontpage.compare.action') }}
+            </v-btn>
+          </p>
         </v-col>
       </v-row>
     </Wrapper>
+
   </div>
 </template>
 

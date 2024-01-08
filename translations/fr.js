@@ -8,37 +8,41 @@ export default {
       title: 'Free open-source BigFive personality traits test',
       description: 'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
     },
-    title: 'Test de personnalité Big Five',
+    title: 'Plateforme de Tests Psychotechnique de Africitizen',
     call_to_action: 'Faites le test gratuit maintenant',
-    no_registration: '* Aucune inscription requise',
-    tests_taken: 'Plus de 4.000.000 personnes ont passé le test',
+    no_registration: '* Inscription requise',
+    tests_taken: 'Comment ça marche?',
     compare: {
-      title: 'Comparez-vous aux autres',
-      text1: 'Comparez-vous avec votre partenaire, vos collègues, vos amis ou votre famille.',
-      text2: 'Découvrez en quoi vous vous différenciez des autres dans les cinq domaines:',
-      action: 'Regardez-le en direct en action'
+      title: 'Pourquoi Passer Ces Tests ?',
+      title1: 'Auto-évaluation',
+      text1: 'Comprenez mieux vos forces et domaines d\'amélioration.',
+      title2: 'Préparation',
+      text2: 'Préparez-vous efficacement pour le programme "Africa Citizen Data Scientist".',
+      title3: 'Contribution au Développement Durable',
+      text3: 'Montrez votre engagement envers l\'utilisation de la data science pour le développement durable en Afrique.',
+      action: 'Inscrivez-vous et Commencez Votre Test Maintenant !'
     },
-    share: 'Partagez avec vos amis et découvrez votre compatibilité',
+    share: 'Prêt à Démontrer Votre Passion pour la Data Science et l\'Afrique ? ',
     cards: {
       open: {
-        title: 'Ouvert',
-        text: 'Il s\'agit d\'un projet open source sous licence MIT.'
+        title: 'Inscription',
+        text: 'Créez votre compte pour accéder aux tests.'
       },
       free: {
-        title: 'Gratuit',
-        text: 'Le test est totalement gratuit'
+        title: 'Choisissez Votre Test',
+        text: 'Sélectionnez et pasez les deux tests'
       },
       scientific: {
-        title: 'Scientifique',
-        text: 'BigFive est un modèle psychologique scientifiquement validé et fiable.'
+        title: 'Passez le Test',
+        text: 'Répondez aux questions à votre rythme.'
       },
       translated: {
-        title: 'Traduit',
-        text: 'Traduit dans plus de 20 langues. Aider <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">here</a>!'
+        title: 'Soumettez Vos Réponses',
+        text: 'Une fois le test terminé, soumettez vos réponses pour évaluation.'
       }
     },
     description: {
-      top: 'Lgagnez à mieux vous connaître grâce à un test de personnalité gratuit et open source.',
+      top: ' Évaluez Vos Aptitude à Devenir un acteur de changement en Afrique.',
       subtop: 'The',
       subtop2: ' is the most scientifically validated and reliable psychological model to measure personality.',
       reference: `Tests and evaluation for this site is gathered from
