@@ -109,6 +109,7 @@ import { sleep } from '../lib/helpers'
 
 export default {
   name: 'Test',
+  middleware: 'auth',
   data: () => ({
     mdiRadioboxBlank,
     mdiRadioboxMarked

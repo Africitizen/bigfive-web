@@ -61,16 +61,6 @@
           </v-col>
         </v-row>
       </v-col>
-      <v-col cols="auto">
-        <h3 class="mb-2">
-          Having questions about or problems with the site?
-        </h3>
-        Please read the <nuxt-link
-          :to="localePath('faq')"
-        >
-          <a @click="logClick('FAQ')">FAQ</a>
-        </nuxt-link>.
-      </v-col>
     </v-row>
   </v-footer>
 </template>

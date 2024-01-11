@@ -22,7 +22,7 @@
           <v-btn
             x-large
             color="#0070f3"
-            :to="localePath('/test')"
+            :to="localePath('/login')"
             dark
             class="mt-7"
           >
@@ -69,7 +69,26 @@
       </v-row>
     </Wrapper>
 
-    <Wrapper background="white">
+    <Wrapper>
+      <v-row
+        cols="12"
+        class="py-10"
+      >
+        <v-col
+          class="text-center"
+          cols="12"
+        >
+          <h1
+            class="font-italic"
+            v-html="$t('frontpage.tests')"
+          />
+        </v-col>
+        <v-col>
+          <Tests />
+        </v-col>
+      </v-row>
+    </Wrapper>
+    <Wrapper background="#e4e4e4">
       <v-row
         cols="12"
         :class="{ 'flex-column-reverse': $vuetify.breakpoint.smAndDown }"
@@ -96,15 +115,23 @@
         >
           <h1 v-html="$t('frontpage.compare.title')" />
 
-          <strong style="color: rgba(0, 0, 0, 0.87);" v-html="$t('frontpage.compare.title1')"/>
+          <strong
+            style="color: rgba(0, 0, 0, 0.87);"
+            v-html="$t('frontpage.compare.title1')"
+          />
           <p v-html="$t('frontpage.compare.text1')" />
 
-          <strong style="color: rgba(0, 0, 0, 0.87);" v-html="$t('frontpage.compare.title2')"/>
+          <strong
+            style="color: rgba(0, 0, 0, 0.87);"
+            v-html="$t('frontpage.compare.title2')"
+          />
           <p v-html="$t('frontpage.compare.text2')" />
 
-          <strong style="color: rgba(0, 0, 0, 0.87);" v-html="$t('frontpage.compare.title3')"/>
+          <strong
+            style="color: rgba(0, 0, 0, 0.87);"
+            v-html="$t('frontpage.compare.title3')"
+          />
           <p v-html="$t('frontpage.compare.text3')" />
-
         </v-col>
       </v-row>
       <v-row>
@@ -119,7 +146,7 @@
           <p>
             <v-btn
               outlined
-              :to="localePath('/compare/W3sibmFtZSI6Ik1hcnZpbiIsImlkIjoiNThhNzA2MDZhODM1YzQwMGM4YjM4ZTg0In0seyJuYW1lIjoiQXJ0aHVyIERlbnQiLCJpZCI6IjVlNTZiYTdhYjA5NjEzMDAwN2Q1ZDZkOCJ9LHsibmFtZSI6IkZvcmQgUGVyZmVjdCIsImlkIjoiNWRlYTllODhlMTA4Y2IwMDYyMTgzYWYzIn0seyJuYW1lIjoiU2xhcnRpYmFydGZhc3QiLCJpZCI6IjVlNTZiNjUwYjA5NjEzMDAwN2Q1ZDZkMCJ9XQ%3D%3D')"
+              :to="localePath('/login')"
             >
               {{ $t('frontpage.compare.action') }}
             </v-btn>
@@ -127,7 +154,6 @@
         </v-col>
       </v-row>
     </Wrapper>
-
   </div>
 </template>
 

@@ -5,13 +5,14 @@ export default {
   },
   frontpage: {
     seo: {
-      title: 'Free open-source BigFive personality traits test',
-      description: 'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+      title: 'Plateforme de Tests Psychotechnique de Africitizen',
+      description: 'Évaluez Vos Aptitude à Devenir un acteur de changement en Afrique.'
     },
     title: 'Plateforme de Tests Psychotechnique de Africitizen',
     call_to_action: 'Faites le test gratuit maintenant',
     no_registration: '* Inscription requise',
     tests_taken: 'Comment ça marche?',
+    tests: 'Nos tests',
     compare: {
       title: 'Pourquoi Passer Ces Tests ?',
       title1: 'Auto-évaluation',
@@ -26,11 +27,13 @@ export default {
     cards: {
       open: {
         title: 'Inscription',
-        text: 'Créez votre compte pour accéder aux tests.'
+        text: 'Créez votre compte pour accéder aux tests.',
+        bigfive: 'Test de personnalité'
       },
       free: {
         title: 'Choisissez Votre Test',
-        text: 'Sélectionnez et pasez les deux tests'
+        text: 'Sélectionnez et pasez les deux tests',
+        safari: 'Safari Synapse'
       },
       scientific: {
         title: 'Passez le Test',

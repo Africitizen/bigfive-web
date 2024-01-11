@@ -124,7 +124,17 @@ export default {
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
-  axios: {
+  axios: { baseURL: process.env.BASE_URL, https: true },
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: process.env.BASE_URL
+    }
+  },
+
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: process.env.BASE_URL
+    }
   },
   sitemap: {
     hostname: 'https://hypatie.africitizen.co'
@@ -142,7 +152,7 @@ export default {
         family: 'Krub',
         size: '1.125rem'
       },
-      icons: false
+      icons: 'mdi'
     },
     lang: {
       current: 'en'

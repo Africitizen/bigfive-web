@@ -31,14 +31,6 @@
         >
           {{ $t('toolbar.see_results') }}
         </v-btn>
-        <v-btn
-          text
-          :to="localePath('compare')"
-          class="hidden-sm-and-down text-none font-weight-regular"
-        >
-          {{ $t('toolbar.compare_with') }}
-        </v-btn>
-        <LanguageSwitcher />
         <v-menu
           v-model="drawer"
           bottom
@@ -82,9 +74,6 @@
 import { mdiMenu } from '@mdi/js'
 
 export default {
-  components: {
-    LanguageSwitcher: () => import('./LanguageSwitcher')
-  },
   data: function () {
     const icons = { mdiMenu }
     return {
@@ -96,12 +85,7 @@ export default {
   computed: {
     items () {
       return [
-        { title: this.$t('toolbar.result'), url: '/result' },
-        { title: this.$t('toolbar.compare'), url: '/compare' },
-        { title: this.$t('toolbar.articles'), url: '/articles' },
-        { title: this.$t('toolbar.privacy'), url: '/privacy' },
-        { title: this.$t('toolbar.about'), url: '/about' },
-        { title: 'FAQ', url: '/faq' }
+        { title: this.$t('toolbar.result'), url: '/result' }
       ]
     }
   }
