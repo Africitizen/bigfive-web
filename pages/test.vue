@@ -115,7 +115,7 @@ export default {
     mdiRadioboxMarked
   }),
   head: () => ({
-    title: 'The test'
+    title: 'Test de personnalité'
   }),
   computed: {
     ...mapState(['test', 'development', 'form', 'loading']),

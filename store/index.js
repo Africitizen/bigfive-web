@@ -184,7 +184,9 @@ export const actions = {
         dateStamp: Date.now()
       }
 
-      await this.$axios.$post('/big_five_resulsts', result)
+      await this.$axios.$post('/big_five_resulsts', result, {
+        Authentication: 'Bearer ' + localStorage.getItem('token')
+      })
 
       context.commit('RESET_STATE')
       context.commit('SET_LOADING', false)

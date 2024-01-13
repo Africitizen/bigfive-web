@@ -27,7 +27,7 @@
         :src="require('@/assets/free.png')"
         loading="lazy"
       >
-      <h3 v-html="$t('frontpage.cards.free.safari')" />
+      <NuxtLink to="/synapse"><h3 v-html="$t('frontpage.cards.free.safari')" /></NuxtLink>
     </v-col>
   </v-row>
 </template>
@@ -43,3 +43,5 @@ h3 {
   padding-top: 5px;
 }
 </style>
+<script setup>
+</script>
