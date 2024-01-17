@@ -58,5 +58,3 @@ h3 {
   padding-top: 5px;
 }
 </style>
-<script setup>
-</script>

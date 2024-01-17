@@ -20,9 +20,21 @@
           />
 
           <v-btn
+            v-if="token === null"
             x-large
             color="#0070f3"
             :to="localePath('/login')"
+            dark
+            class="mt-7"
+          >
+            {{ $t('frontpage.call_to_action') }}
+          </v-btn>
+
+          <v-btn
+            v-if="token !== null"
+            x-large
+            color="#0070f3"
+            :to="localePath('tests')"
             dark
             class="mt-7"
           >
@@ -145,8 +157,17 @@
           />
           <p>
             <v-btn
+              v-if="token === null"
               outlined
               :to="localePath('/login')"
+            >
+              {{ $t('frontpage.compare.action') }}
+            </v-btn>
+
+            <v-btn
+              v-if="token !== null"
+              outlined
+              :to="localePath('/tests')"
             >
               {{ $t('frontpage.compare.action') }}
             </v-btn>
@@ -164,7 +185,8 @@ export default {
   name: 'Home',
   data () {
     return {
-      africitizenTests: []
+      africitizenTests: [],
+      token: null
     }
   },
   head () {
@@ -190,6 +212,7 @@ export default {
   },
   mounted () {
     this.$amplitude.getInstance().logEvent('b5.frontpage.loaded')
+    this.token = localStorage.getItem('token')
   },
   methods: {
     async getTestList () {

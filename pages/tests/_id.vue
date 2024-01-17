@@ -31,13 +31,13 @@
               :rules="rules.wordsRules"
               required
               placeholder="Votre réponse"
-              @change="answer => addResponse({questionId: question.id, response: answer, questionType:question.type.html_element})"
+              @change="answer => addResponse({questionId: question.id, response: answer, questionType:question.type.id})"
             />
             <v-radio-group
               v-if="question.type.html_element == 'radio'"
               :value="question.id"
 
-              @change="answer => addResponse({questionId: question.id, response: answer, questionType:question.type.html_element})"
+              @change="answer => addResponse({questionId: question.id, response: answer, questionType:question.type.id})"
             >
               <v-radio
                 v-for="option in question.option"
@@ -61,6 +61,8 @@
 
 <script>
 
+import { elapsedTimeInSeconds, sleep } from '@/lib/helpers'
+
 export default {
   name: 'AfricitizenTest',
   middleware: 'auth',
@@ -71,7 +73,8 @@ export default {
       africitizenTest: null,
       rules: {
         wordsRules: [val => (val || '').trim().length > 0 || 'Réponse requise']
-      }
+      },
+      testStart: 0
     }
   },
   head () {
@@ -91,6 +94,7 @@ export default {
   },
   mounted () {
     this.getQuestionData()
+    this.testStart = Date.now()
   },
   methods: {
     addResponse (response) {
@@ -108,7 +112,19 @@ export default {
       }
     },
     async senQuestionResponse () {
-
+      if (this.$refs.form.validate()) {
+        await this.$axios.post('africitizen_tests', {
+          testId: this.africitizenTest.id,
+          answers: this.userQuestionResponse,
+          timeElapsed: elapsedTimeInSeconds(this.testStart)
+        }, {
+          Authentication: 'Bearer ' + localStorage.getItem('token')
+        }).then(async (response) => {
+          this.$confetti.start({ particlesPerFrame: 0.25, particles: [{ type: 'heart' }] })
+          await sleep(4000)
+          this.$confetti.stop()
+        })
+      }
     },
     async getQuestionData () {
       await this.$axios.get(`africitizen_tests/${this.$route.params.id}`).then(response => {
