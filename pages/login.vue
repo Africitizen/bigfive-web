@@ -95,7 +95,7 @@ export default {
     async login () {
       if (this.$refs.form.validate()) {
         await this.$axios.$post('/login', this.loginData).then(response => {
-          localStorage.setItem('token', response.data.token)
+          this.$cookies.set('token', response.data.token)
           $nuxt.$router.push({ path: '/' })
         }).catch(error => {
           this.hasError = true

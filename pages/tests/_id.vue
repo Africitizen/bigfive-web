@@ -118,7 +118,9 @@ export default {
           answers: this.userQuestionResponse,
           timeElapsed: elapsedTimeInSeconds(this.testStart)
         }, {
-          Authentication: 'Bearer ' + localStorage.getItem('token')
+          headers: {
+            Authorization: 'Bearer ' + this.$cookies.get('token')
+          }
         }).then(async (response) => {
           this.$confetti.start({ particlesPerFrame: 0.25, particles: [{ type: 'heart' }] })
           await sleep(4000)

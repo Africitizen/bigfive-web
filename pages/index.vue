@@ -20,7 +20,7 @@
           />
 
           <v-btn
-            v-if="token === null"
+            v-if="token === undefined"
             x-large
             color="#0070f3"
             :to="localePath('/login')"
@@ -31,7 +31,7 @@
           </v-btn>
 
           <v-btn
-            v-if="token !== null"
+            v-if="token !== undefined"
             x-large
             color="#0070f3"
             :to="localePath('tests')"
@@ -157,7 +157,7 @@
           />
           <p>
             <v-btn
-              v-if="token === null"
+              v-if="token === undefined"
               outlined
               :to="localePath('/login')"
             >
@@ -165,7 +165,7 @@
             </v-btn>
 
             <v-btn
-              v-if="token !== null"
+              v-if="token !== undefined"
               outlined
               :to="localePath('/tests')"
             >
@@ -212,7 +212,7 @@ export default {
   },
   mounted () {
     this.$amplitude.getInstance().logEvent('b5.frontpage.loaded')
-    this.token = localStorage.getItem('token')
+    this.token = this.$cookies.get('token')
   },
   methods: {
     async getTestList () {

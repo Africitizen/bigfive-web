@@ -65,12 +65,15 @@ export default {
   optimizedImages: {
     optimizeImages: true
   },
+  ssr: true,
+  target: 'server',
   modules: [
     '@nuxt/content',
     '@nuxtjs/axios',
     'nuxt-webfontloader',
     '@nuxtjs/pwa',
     '@aceforth/nuxt-optimized-images',
+    'cookie-universal-nuxt',
     [
       'nuxt-i18n',
       {

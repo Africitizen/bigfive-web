@@ -183,9 +183,16 @@ export const actions = {
         timeElapsed: elapsedTimeInSeconds(context.state.test.testStart),
         dateStamp: Date.now()
       }
+      const token = this.$cookies.get('token')
 
       await this.$axios.$post('/big_five_resulsts', result, {
-        Authentication: 'Bearer ' + localStorage.getItem('token')
+        headers: {
+          c: 'Bearer ' + token
+        }
+      }).then(response => {
+        console.log(response.data.data)
+      }).catch(error => {
+        console.log(error.data)
       })
 
       context.commit('RESET_STATE')
