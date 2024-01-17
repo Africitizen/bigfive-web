@@ -187,7 +187,7 @@ export const actions = {
 
       await this.$axios.$post('/big_five_resulsts', result, {
         headers: {
-          c: 'Bearer ' + token
+          Authorization: 'Bearer ' + token
         }
       }).then(response => {
         console.log(response.data.data)

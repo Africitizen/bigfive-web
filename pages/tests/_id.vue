@@ -126,6 +126,7 @@ export default {
           await sleep(4000)
           this.$confetti.stop()
         })
+        $nuxt.$router.push({ path: '/' })
       }
     },
     async getQuestionData () {
