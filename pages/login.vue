@@ -47,7 +47,6 @@
             >
               Se connecter
             </v-btn>
-            <p>Vous n'avez pas encore un compte? <NuxtLink :to="localePath('/register')">Inscrivez-vous</NuxtLink></p>
           </v-form>
         </v-col>
       </v-row>

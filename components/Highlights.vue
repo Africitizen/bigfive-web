@@ -30,21 +30,7 @@
       <h3 v-html="$t('frontpage.cards.free.title')" />
       <span color="#666">{{ $t('frontpage.cards.free.text') }}</span>
     </v-col>
-    <v-col
-      cols="6"
-      xs="6"
-      sm="6"
-      md="3"
-    >
-      <img
-        class="responsive"
-        alt="scientific"
-        :src="require('@/assets/scientific.png')"
-        loading="lazy"
-      >
-      <h3 v-html="$t('frontpage.cards.scientific.title')" />
-      <span color="#666">{{ $t('frontpage.cards.scientific.text') }}</span>
-    </v-col>
+
     <v-col
       cols="6"
       xs="6"
@@ -54,7 +40,7 @@
       <img
         class="responsive"
         alt="Translated to over 20 langauges"
-        :src="require('@/assets/languages.png')"
+        :src="require('@/assets/scientific.png')"
         loading="lazy"
       >
       <h3 v-html="$t('frontpage.cards.translated.title')" />

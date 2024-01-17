@@ -43,7 +43,7 @@
           <img
             class="responsive"
             alt="Girl infront of test"
-            :src="require('@/assets/front.svg')"
+            :src="require('@/assets/DALL·E 2024-01-16 00.40.47 - An interactive dashboard on a computer screen showing detailed.png')"
           >
         </v-col>
       </v-row>
@@ -84,7 +84,7 @@
           />
         </v-col>
         <v-col>
-          <Tests />
+          <Tests :africitizen-tests="africitizenTests" />
         </v-col>
       </v-row>
     </Wrapper>
@@ -103,7 +103,7 @@
           <img
             class="responsive"
             alt="Comparing people"
-            :src="require('@/assets/front_compare.svg')"
+            :src="require('@/assets/DALL·E 2024-01-16 00.38.57 - Creative representation of the map of Africa, adorned with dat.png')"
             loading="lazy"
           >
         </v-col>
@@ -162,6 +162,11 @@ import { mapState } from 'vuex'
 
 export default {
   name: 'Home',
+  data () {
+    return {
+      africitizenTests: []
+    }
+  },
   head () {
     return {
       title: this.$t('frontpage.seo.title'),
@@ -177,11 +182,23 @@ export default {
       ]
     }
   },
+  created () {
+    this.getTestList()
+  },
   computed: {
     ...mapState(['development'])
   },
   mounted () {
     this.$amplitude.getInstance().logEvent('b5.frontpage.loaded')
+  },
+  methods: {
+    async getTestList () {
+      await this.$axios.get('africitizen_tests').then(response => {
+        this.africitizenTests = response.data.data
+      }).catch(error => {
+        console.log(error.response)
+      })
+    }
   }
 }
 </script>

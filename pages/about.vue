@@ -67,36 +67,7 @@ export default {
     return {
       mdiGithub,
       team: [
-        {
-          name: 'JONAS MACCYBER ENGE',
-          role: 'FOUNDER',
-          avatar: require('@/assets/jonas.jpg'),
-          github: 'https://github.com/maccyber'
-        },
-        {
-          name: 'GEIR GÅSODDEN',
-          role: 'CO FOUNDER',
-          avatar: require('@/assets/geir.jpg'),
-          github: 'https://github.com/zrrrzzt'
-        },
-        {
-          name: 'OLE MORTEN AMUNDSEN',
-          role: 'WEB DEVELOPER',
-          avatar: require('@/assets/ole_morten.jpg'),
-          github: 'https://github.com/oma'
-        },
-        {
-          name: 'PÅL ANDRÈ SUNDT',
-          role: 'ART DIRECTOR',
-          avatar: require('@/assets/paal.jpg'),
-          github: 'https://github.com/str1fe'
-        },
-        {
-          name: 'MATHIAS MOXNES',
-          role: 'WEB DEVELOPER',
-          avatar: require('@/assets/mathias.jpg'),
-          github: 'https://github.com/moxnes'
-        }
+
       ]
     }
   },

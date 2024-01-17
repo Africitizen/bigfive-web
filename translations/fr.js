@@ -27,7 +27,7 @@ export default {
     cards: {
       open: {
         title: 'Inscription',
-        text: 'Créez votre compte pour accéder aux tests.',
+        text: 'Créez votre compte ou connectez-vous pour accéder aux tests.',
         bigfive: 'Test de personnalité'
       },
       free: {
