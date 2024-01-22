@@ -67,10 +67,10 @@ import { mdiMenuDown } from '@mdi/js'
 
 export default {
   name: 'Result',
+  middleware: 'auth',
   async asyncData ({ params, store, $axios, query }) {
     try {
-      const lang = query.lang ? `/${query.lang}` : ''
-      const url = process.env.API_URL + 'result/' + params.id + lang
+      const url = process.env.BASE_URL + 'big_five_resulsts/' + params.id
 
       const data = await $axios.$get(url)
 

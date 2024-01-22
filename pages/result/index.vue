@@ -40,11 +40,12 @@ import { validMongoId, formatId } from '../../lib/helpers.js'
 
 export default {
   name: 'ResultForm',
+  middleware: 'auth',
   data: () => ({
     id: '',
     resultId: false,
     rules: {
-      valid: value => validMongoId(formatId(value)) || 'Not a valid ID'
+      valid: value => !!value || 'Not a valid ID'
     }
   }),
   head () {
