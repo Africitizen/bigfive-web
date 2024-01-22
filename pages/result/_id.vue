@@ -64,21 +64,28 @@
 
 <script>
 import { mdiMenuDown } from '@mdi/js'
-
+import calculateScore from '@alheimsins/bigfive-calculate-score'
+import getResult from '@alheimsins/b5-result-text'
 export default {
   name: 'Result',
   middleware: 'auth',
-  async asyncData ({ params, store, $axios, query }) {
+  async asyncData ({ params, store, $axios, query, app }) {
     try {
-      const url = process.env.BASE_URL + 'big_five_resulsts/' + params.id
+      const url = 'big_five_results/' + params.id
 
-      const data = await $axios.$get(url)
+      const data = await $axios.$get(url, {
+        headers: {
+          Authorization: 'Bearer ' + app.$cookies.get('token')
+        }
+      })
 
+      const scores = calculateScore(data.data)
+      const results = getResult({ scores, lang: query.lang || data.data.lang || 'en' })
       return {
-        results: data.results,
+        results: results,
         metadata: {
-          timestamp: data.timestamp,
-          language: query.lang || data.language || 'en',
+          timestamp: data.data.timestamp,
+          language: query.lang || data.data.lang || 'en',
           availableLanguages: data.availableLanguages
         }
       }

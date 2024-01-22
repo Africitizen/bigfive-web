@@ -26,7 +26,7 @@
           color="primary"
           :to="localePath('/result/' + formatId(id))"
           large
-          :disabled="!validMongoId(formatId(id))"
+          :disabled="id.length == 0"
         >
           {{ $t('getResult.getResult') }}
         </v-btn>
@@ -63,6 +63,7 @@ export default {
       ]
     }
   },
+
   mounted () {
     if (validMongoId(localStorage.getItem('resultId'))) {
       this.resultId = localStorage.getItem('resultId')

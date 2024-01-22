@@ -25,6 +25,16 @@
   dependencies:
     knuth-shuffle "1.0.8"
 
+"@alheimsins/b5-result-text@^5.0.5":
+  version "5.0.5"
+  resolved "https://registry.npmjs.org/@alheimsins/b5-result-text/-/b5-result-text-5.0.5.tgz"
+  integrity sha512-cew4uJQ8YWfyczM+YVGEfRAqdS7Da+ENfIrBmh9CzJl9AUzyQrgUI6LuUWYL0xJ1dCr8gZbQB6wKH0QpyDCjrA==
+
+"@alheimsins/bigfive-calculate-score@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.npmjs.org/@alheimsins/bigfive-calculate-score/-/bigfive-calculate-score-3.0.3.tgz"
+  integrity sha512-By+1YifaH0WwGtEe5HYg55bE4C/8v6uGKxR0uBehUwucql891tgL9CX8nu1rIzFwQ8Zd1Ylz0YxWBDHCmLFnbA==
+
 "@amplitude/types@^1.10.2":
   version "1.10.2"
   resolved "https://registry.npmjs.org/@amplitude/types/-/types-1.10.2.tgz"
