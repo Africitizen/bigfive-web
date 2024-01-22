@@ -182,7 +182,7 @@ export default {
     theBigFive: 'Les cinq grands',
     score: 'But',
     important: 'Important!',
-    saveResults: 'Enregistrez l\'ID suivant pour voir les résultats plus tard ou',
+    saveResults: 'Enregistrez l\'ID suivant pour voir les résultats plus tard',
     compare: 'comparer',
     toOthers: 'toi-même aux autres',
     seo: {

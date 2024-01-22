@@ -24,9 +24,7 @@
       </v-row>
 
       <div class="text-center mt-10">
-        <b>{{ $t('results.important') }}</b> {{ $t('results.saveResults') }} <nuxt-link :to="localePath('compare')">
-          {{ $t('results.compare') }}
-        </nuxt-link> {{ $t('results.toOthers') }}
+        <b>{{ $t('results.important') }}</b> {{ $t('results.saveResults') }}
         <br>
         <br>
         <v-alert
