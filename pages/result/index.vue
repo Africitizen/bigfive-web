@@ -2,7 +2,7 @@
   <div>
     <h1>{{ $t('getResult.result') }}</h1>
     <div class="body-text">
-      {{ $t('getResult.explanation') }} <span class="font-italic secondary--text">58a70606a835c400c8b38e84</span> {{ $t('getResult.idInput') }}
+      Vous pouvez consulter le résultat de votre test de personnalité sur cette page
       <br>
       <v-text-field
         v-model="id"

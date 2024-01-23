@@ -94,7 +94,7 @@
             color="secondary"
             @click="SUBMIT_TEST"
           >
-            {{ $t('test.seeResults') }}
+            Envoyer
           </v-btn>
         </div>
       </v-row>
